@@ -1,0 +1,13 @@
+Release Notes
+============================
+/ Michael Mittelman for Exos Interview /
+/             5-15/2017                /
+
+1. Created basic django 1.9 env
+2. Updated User model by adding fields into User class in django/contrib/auth/models.py
+3. ran makemigrations to create the migration and ran migrate to add the fields to the database
+4. Created class based generic views and urls for list, detail, add, edit and delete user(s).
+5. Created templates to display each of the views
+6. Created two template tags to display allowed/blocked based on age and BizzFuzz based on random number
+7. Added columns to list template to display template tags
+8. Created unit test to test each view and the two template tags.
