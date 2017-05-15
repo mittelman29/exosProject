@@ -21,10 +21,13 @@ Installation instructions
 6. Edit the exos/lib/python2.7/site-packages/django/contrib/auth/models.py file
 
     A. Add the following import at line 15
-        import random
+    
+            import random
+    
     B. Add the following at line 373:
-        birthday = models.DateField(blank=True, null=True)
-        random_num = models.PositiveIntegerField(default=random.randint(1,101), validators=[validators.MinValueValidator(1),         validators.MaxValueValidator(100)])
+    
+            birthday = models.DateField(blank=True, null=True)
+            random_num = models.PositiveIntegerField(default=random.randint(1,101), validators=[validators.MinValueValidator(1),         validators.MaxValueValidator(100)])
         
     The entire User class should appear as follows:
     
@@ -41,7 +44,7 @@ Installation instructions
         class Meta(AbstractUser.Meta):
             swappable = 'AUTH_USER_MODEL'
             
-7. The migration has already been run so the fields are in the database, so no migration needs to be run.
+7. The migration has already been run so the fields are in the database.
 
 8. Start the django development server
     
