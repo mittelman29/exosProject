@@ -1,0 +1,26 @@
+{% load exos_extras %}
+<style>
+body { text-align:center; }
+.row { width:90%;margin:auto; }
+.cell { width:19%;float:left;border:1px solid; }
+</style>
+<h1>Users</h1>
+<div class="row" style="font-weight:bold;">
+    <div class="cell">Username</div>
+    <div class="cell">Birthday</div>
+    <div class="cell">Eligible</div>
+    <div class="cell">Random Number</div>
+    <div class="cell">BizzFuzz</div>
+</div>
+
+<div class="row">
+{% for user in object_list %}
+    <div class="cell"><a href='{% url 'user_detail' user.id %}'>{{ user.username }}</a>   &nbsp;</div>
+    <div class="cell">{{ user.birthday }}   &nbsp;</div>
+    <div class="cell">{% is_eligible user.birthday %}   &nbsp;</div>
+    <div class="cell">{{ user.random_num }} &nbsp;</div>
+    <div class="cell">{% bizz_fuzz user.random_num %} &nbsp;</div>
+{% empty %}
+    <div>There are no users in the system.</div>
+{% endfor %}
+</div>

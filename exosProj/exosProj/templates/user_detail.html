@@ -1,0 +1,23 @@
+<style>
+body { text-align:center; }
+.row { width:90%;margin:auto; }
+.cell { width:14.6%;float:left;border:1px solid; }
+</style>
+<h1>{{ object.first_name }} {{ object.last_name }}</h1>
+<div class="row" style="font-weight:bold;">
+    <div class="cell">User Name</div>
+    <div class="cell">First Name</div>
+    <div class="cell">Last Name</div>
+    <div class="cell">Email Address</div>
+    <div class="cell">Birth Date</div>
+    <div class="cell">Random Number</div>
+</div>
+
+<div class="row">
+    <div class="cell">{{ object.username }}   &nbsp;</div>
+    <div class="cell">{{ object.first_name }} &nbsp;</div>
+    <div class="cell">{{ object.last_name }}  &nbsp;</div>
+    <div class="cell">{{ object.email }}      &nbsp;</div>
+    <div class="cell">{{ object.birthday }}   &nbsp;</div>
+    <div class="cell">{{ object.random_num }} &nbsp;</div>
+</div>
