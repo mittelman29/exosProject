@@ -6,15 +6,15 @@ Installation instructions
 
 2. cd to directory and run:
 
-    virtualenv -p /usr/bin/python2.7 exos
+        virtualenv -p /usr/bin/python2.7 exos
     
 3. Source the virtualenv
 
-    source exos/bin/activate
+        source exos/bin/activate
 
 4. Install django
 
-    pip install Django==1.9.13
+        pip install Django==1.9.13
     
 5. Clone exosProj directory from this repository into the exos directory
 
