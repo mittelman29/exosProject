@@ -48,6 +48,6 @@ Installation instructions
 
 8. Start the django development server
     
-    python manage.py runserver
+        python manage.py runserver
     
 9. Navigate to http://127.0.0.1/users/list to start! Good luck!
